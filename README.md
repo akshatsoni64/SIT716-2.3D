@@ -4,22 +4,20 @@ SMTP Header Injection Attack Demonstration for SIT716
 ### Dependencies:
 - [Ubuntu (LTS)](https://ubuntu.com/download/desktop)
 - PHP (8.1)
-```
-sudo apt install php-cli
-```
 - Sendmail
-```
-sudo apt install sendmail
-```
 
 ### Steps:
 - Setup Ubuntu Machine
 - Install PHP
+```
+sudo apt install php-cli
+```
 - Install Sendmail
-- Configure the SMTP Server for Sendmail Service
-- Build the sendmail service
-- Restart the sendmail service
-- Stream the sendmail logs
+```
+sudo apt install sendmail
+```
+- Configure the SMTP Server for Sendmail Service [1]
+- Stream the sendmail logs [2]
 ```
 sudo tail -f /var/log/mail.log
 ```
@@ -29,10 +27,16 @@ git clone https://github.com/akshatsoni64/SIT716-2.3D.git
 ```
 - Run the script
 ```
-php8.1 mail.php
+php8.1 mail.php # normal function script
+```
+```
+php8.1 mail-injection.php # injection attack script
 ```
 - Check the sendmail logs
+```
+sudo tail -f /var/log/mail.log
+```
 
 References:
-- [Sendmail Setup](https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/)
-- [Sendmail Logs](https://serverfault.com/a/154213)
+1. [Sendmail Setup](https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/)
+2. [Sendmail Logs](https://serverfault.com/a/154213)
