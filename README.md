@@ -40,3 +40,4 @@ sudo tail -f /var/log/mail.log
 References:
 1. [Sendmail Setup](https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/)
 2. [Sendmail Logs](https://serverfault.com/a/154213)
+3. [PHP mail()](https://www.php.net/manual/en/function.mail.php)
